@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Privacy Request Checker</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+    }
+    #result {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .found {
+      background-color: #e6ffe6;
+      border: 1px solid #99ff99;
+    }
+    .not-found {
+      background-color: #ffe6e6;
+      border: 1px solid #ff9999;
+    }
+    .request-link {
+      display: block;
+      margin-top: 10px;
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .request-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Privacy Request Checker</h2>
+  <div id="result"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

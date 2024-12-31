@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Privacy Request URL Checker",
+    "version": "1.0",
+    "description": "Checks if current domain has a privacy request URL in database",
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "Privacy Request Checker"
+    }, 
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
