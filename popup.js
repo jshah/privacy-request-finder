@@ -1,3 +1,5 @@
+import { privacyDatabase } from './database.js';
+
 document.addEventListener('DOMContentLoaded', function() {
     // Get current tab URL
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
@@ -5,20 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
       const domain = url.hostname;
       
       // Check domain against database
-      checkDomain(domain);
+      console.log('domain:', domain);
+      clean_domain = domain.replace('www.','')
+      checkDomain(clean_domain);
     });
   });
   
-  function checkDomain(domain) {
-    // Sample database - Replace with your actual database implementation
-    const privacyDatabase = {
-      'www.datagrail.io': 'https://preferences.datagrail.io/',
-      'www.ruggable.com': 'https://preferences.ruggable.com/'
-      // Add more domains and their privacy request URLs
-    };
-
-    console.log('domain:', domain);
-  
+  function checkDomain(domain) {  
     const resultDiv = document.getElementById('result');
     
     if (domain in privacyDatabase) {
