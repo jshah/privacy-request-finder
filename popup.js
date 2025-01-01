@@ -1,5 +1,3 @@
-import { privacyDatabase } from './database.js';
-
 document.addEventListener('DOMContentLoaded', function() {
     // Get current tab URL
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
