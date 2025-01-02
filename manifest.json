@@ -5,12 +5,18 @@
     "description": "Checks if current domain has a privacy request URL in database",
     "permissions": [
       "activeTab",
+      "tabs",
       "storage"
     ],
     "action": {
       "default_popup": "popup.html",
-      "default_title": "Privacy Request Checker"
-    }, 
+      "default_title": "Privacy Request Checker",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    },
     "background": {
       "service_worker": "background.js"
     },
